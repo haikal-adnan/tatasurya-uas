@@ -1,0 +1,981 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Font/Mulish-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lemon";
+    src: url(Font/Lemon-Regular.ttf);
+}
+
+@font-face {
+    font-family: "League Spartan";
+    src: url(Font/LeagueSpartan-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(Font/OpenSans.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Italic";
+    src: url(Font/OpenSansItalic.ttf);
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.content{
+    display: flex;
+    height: 100vh;
+    background-color: #3C486B;
+
+}
+
+.app{
+    width: 250px;
+    height: 100%;
+    background-color: #070F2B;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+
+
+.app > *{
+    margin-top: 15px;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+}
+
+.menu_utama, .menu_akun,.menu_materi{
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+    
+}
+
+.menu_utama > p{
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 12px;
+}
+
+.menu_akun > p{
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 12px;
+}
+
+.menu_materi > p{
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 12px;
+}
+
+.menu_app{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu_app > *{
+    margin-left: 12px;
+}
+
+.active{
+    background-color: #393646;
+    color: white;
+}
+
+.active > p a{
+    color: white;
+}
+
+.active svg path {
+    fill: white;
+}
+
+.menu_app:not(.active):hover a{
+    color: #3572EF;
+    transition: 0.5s;
+
+    
+}
+
+.menu_app:not(.active) > p a{
+    color: #ffffff;
+}
+
+
+.menu_app > p{
+    margin: 0px;
+    margin-left: 4px;
+    margin-inline-start: 0px;
+    height: 21px;
+}
+
+.menu_app > p a{
+    text-decoration: none;
+   
+}
+
+
+.menu_app:not(.active):hover svg path{
+    fill: #3572EF;
+    transition: 0.5s;
+    
+}
+
+
+.menu_app > svg{
+    margin-right: 10px;
+    margin-block-start: 4px;
+}
+
+.app2{
+    display: none;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100%; 
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    z-index: 2;
+}
+
+.app2 > div{
+    margin: 10px;
+}
+
+.menu_tersembunyi{
+    cursor: pointer;
+}
+
+.menu_tersembunyi:hover svg path{
+    cursor: pointer;
+    fill: #D04848;
+    
+}
+
+.penutup_menu{
+    display: none;
+    background-color: #393646;
+    opacity: 0.5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.profile{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 200px;
+}
+
+.profile_user{
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+    position: relative;
+    font-size: 40px; /*Parent font profile*/
+    width: 1198px; /*Parent width profile*/
+    height: 100%; /*Parent height profile*/
+    margin-bottom: 3%;
+    margin-left: 101px;
+}
+
+.profile_info{
+    display: flex;
+}
+
+.info_user{
+    margin-left: 30px;
+    
+}
+.info_user > p{
+    color: #ffffff;
+    font-family: Lemon;
+    font-size: 70%;
+    font-style: normal;
+    font-weight: 400;
+    margin-block-end:0px;
+    margin-block-start: 30px;
+}
+
+.foto_user{
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    background: url(User/profile2.jpg) lightgray 50% / cover no-repeat;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-block-start:25px;
+}
+
+
+
+.poin_user{
+    display: flex;
+}
+
+
+.poin{
+    display: flex;
+    font-family: Lemon;
+    font-size: 70%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: -2%;
+}
+
+.poin > p{
+    margin-left: 7px;
+    
+}
+
+.poin > svg{
+    width: 50px;
+    height: 50px;
+}
+
+.poin_positif_user{
+    color: #3F0;
+}
+
+.poin_negatif_user{
+    color: #F00;
+}
+
+.kelas{
+    display: flex;
+    margin-block-start: 30px;
+    margin-left: 130px;
+    width: 30%;
+}
+
+.logo_kelas{
+    height: 100px;
+}
+
+.logo_kelas > svg{
+    width: 100px;
+    height: 100px;
+}
+
+.posisi_user > p{
+    color: #FFFFFF;
+    font-family: Lemon;
+    font-size: 70%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-start:9px;
+    margin-block-end: 0px;
+    margin-left: 20px;
+}
+
+.badge_user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px; /*Parent Besar Font Badge*/
+}
+
+.badge_user > p{
+    color: #FFFFFF;
+    font-family: Mulish;
+    font-size: 80%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 66%;
+}
+
+.badge{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 35px;
+    justify-content: center;
+}
+
+.badge > div{
+    width: 186px;
+    height: 210.26px;
+}
+
+
+.badge > div{
+    width: 230px; /*Parent Width Badge */
+    height: 260.36px; /*Parent Height Badge*/
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.40);
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #4F4557;
+    
+}
+
+.badge_gambar{
+    width: 100%;
+    height: 63%;
+    flex-shrink: 0;
+    border-radius: 16.018px 16.018px 0px 0px;
+    background: #393646;
+}
+
+.badge_gambar > img{
+    margin-top: 20px;
+    width: 45%;
+    height: auto;
+}
+
+.badge_info{
+    text-align: center;
+    height: 55%;
+    width: 100%;
+    
+}
+
+.nama_badge{
+    color: #FFF;
+    font-family: "League Spartan";
+    font-size: 70%;
+    margin-block-end :4px;
+    margin-block-start :20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.poin_badge{
+    color: #FFF;
+    font-family: Lemon;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-start : 0px;
+}
+
+.positif_badge{
+    color: #3F0;
+}
+
+.app2{
+    display: none;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100%; 
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    z-index: 2;
+}
+
+.app2 > div{
+    margin: 10px;
+}
+
+.menu_tersembunyi{
+    cursor: pointer;
+}
+
+.menu_tersembunyi:hover svg path{
+    cursor: pointer;
+    fill: #D04848;
+    
+}
+
+.penutup_menu{
+    display: none;
+    background-color: #393646;
+    opacity: 0.5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 340px) {
+    .app2{
+        display: flex;
+    }
+
+    .posisi_user > p{
+        color: #FFFFFF;
+        font-family: Lemon;
+        font-size: 70%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-block-start:9px;
+        margin-block-end: 0px;
+        margin-left: 0px;
+    }
+
+    .profile{
+        margin-left: 0px;
+    }
+
+    .info_user{
+        margin-left: 0px;
+    }
+
+    .foto_user{
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        background: url(User/profile2.jpg) lightgray 50% / cover no-repeat;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-block-start:25px;
+    }
+
+    .profile_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .badge{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 35px;
+        justify-content: center;
+    }
+
+    .badge_user > p{
+        color: #FFFFFF;
+        font-family: Mulish;
+        font-size: 80%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 58%;
+    }
+
+    .profile_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px; /*Parent font profile*/
+        width: auto; /*Parent width profile*/
+        height: auto; /*Parent height profile*/
+        margin-top: 100px;
+        margin-right:15%;
+    }
+
+    .kelas{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .poin > svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .logo_kelas > svg{
+        width: 80%;
+        height: 80%;
+    }
+
+    .badge_user{
+        font-size: 18px; /*Parent Besar Font Badge*/
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .badge > div{
+        width: 140px;
+        height: 158.06px;
+    }
+
+    .badge_gambar > img {
+        margin-top: 12px;
+
+    }
+
+    .nama_badge {
+        margin-block-end: 4px;
+        margin-block-start: 11px;
+    }
+
+    .app{
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+    }
+
+}
+
+@media only screen and (min-width: 341px) and (max-width: 600px) {
+    .posisi_user > p{
+        color: #FFFFFF;
+        font-family: Lemon;
+        font-size: 70%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-block-start:9px;
+        margin-block-end: 0px;
+        margin-left: 0px;
+    }
+
+    .info_user{
+        margin-left: 0px;
+    }
+
+    .foto_user{
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        background: url(User/profile2.jpg) lightgray 50% / cover no-repeat;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-block-start:25px;
+    }
+
+    .profile_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile{
+        margin-left: 0px;
+    }
+
+    .info_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .badge{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 35px;
+        justify-content: center;
+    }
+
+    .badge_user > p{
+        color: #FFFFFF;
+        font-family: Mulish;
+        font-size: 80%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 58%;
+    }
+
+    .profile_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px; /*Parent font profile*/
+        width: auto; /*Parent width profile*/
+        height: auto; /*Parent height profile*/
+        margin-top: 100px;
+        margin-right:15%;
+    }
+
+    .kelas{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .poin > svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .logo_kelas > svg{
+        width: 80%;
+        height: 80%;
+    }
+
+    .badge_user{
+        font-size: 18px; /*Parent Besar Font Badge*/
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .badge > div{
+        width: 140px;
+        height: 158.06px;
+    }
+
+    .badge_gambar > img {
+        margin-top: 12px;
+
+    }
+
+    .nama_badge {
+        margin-block-end: 4px;
+        margin-block-start: 11px;
+    }
+
+    .app{
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+    }
+
+    .app2{
+        display: flex;
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .posisi_user > p{
+        color: #FFFFFF;
+        font-family: Lemon;
+        font-size: 70%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-block-start:9px;
+        margin-block-end: 0px;
+        margin-left: 0px;
+    }
+
+    .info_user{
+        margin-left: 0px;
+    }
+
+    .foto_user{
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        background: url(User/profile2.jpg) lightgray 50% / cover no-repeat;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-block-start:25px;
+    }
+
+    .profile_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .badge{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 35px;
+        justify-content: center;
+    }
+
+    .badge_user > p{
+        color: #FFFFFF;
+        font-family: Mulish;
+        font-size: 80%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 58%;
+    }
+
+    .profile_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px; /*Parent font profile*/
+        width: 600px; /*Parent width profile*/
+        height: auto; /*Parent height profile*/
+        margin-top: 100px;
+        margin-right:15%;
+    }
+    
+    .profile{
+        margin-left: 0px;
+    }
+
+    .kelas{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .poin > svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .logo_kelas > svg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .badge_user{
+        font-size: 18px; /*Parent Besar Font Badge*/
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .badge > div{
+        width: 140px;
+        height: 158.06px;
+    }
+
+    .badge_gambar > img {
+        margin-top: 12px;
+
+    }
+
+    .nama_badge {
+        margin-block-end: 4px;
+        margin-block-start: 11px;
+    }
+
+    .app{
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+    }
+
+    .app2{
+        display: flex;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .badge{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 35px;
+        justify-content: center;
+    }
+
+    .badge_user > p{
+        color: #FFFFFF;
+        font-family: Mulish;
+        font-size: 80%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 56%;
+    }
+
+    .profile_user{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px; /*Parent font profile*/
+        width: 769px; /*Parent width profile*/
+        height: auto; /*Parent height profile*/
+        margin-top: 100px;
+        margin-right: 25%;
+    }
+
+    .profile{
+        margin-left: 0px;
+    }
+
+    .kelas{
+        margin-right: 48.6%;
+    }
+
+    .posisi_user > p{
+        margin-left: 37px;
+    }
+
+
+    .poin > svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .foto_user{
+        width: 98px;
+        height: 98px;
+        margin-block-start: 18px;
+    }
+
+    .logo_kelas > svg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .badge_user{
+        font-size: 24px; /*Parent Besar Font Badge*/
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .badge > div{
+        width: 186px;
+        height: 210.26px;
+    }
+
+    .app{
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+    }
+
+    .app2{
+        display: flex;
+    }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .profile_user{
+        font-size: 30px; /*Parent font profile*/
+        width: 958.4px; /*Parent width profile*/
+        height: 167.13px; /*Parent height profile*/
+        margin-top: 100px;
+    }
+
+    .poin > svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .foto_user{
+        width: 98px;
+        height: 98px;
+        margin-block-start: 18px;
+    }
+
+    .logo_kelas > svg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .badge_user{
+        font-size: 24px; /*Parent Besar Font Badge*/
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .badge > div{
+        width: 186px;
+        height: 210.26px;
+    }
+
+    .app{
+        width: 0px;
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+        transition: width 0.1s;
+    }
+
+    .app2{
+        display: flex;
+    }
+
+    .profile{
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .profile_user{
+        font-size: 30px; /*Parent font profile*/
+        width: 958.4px; /*Parent width profile*/
+        height: 167.13px; /*Parent height profile*/
+        margin-bottom: 1%;
+    }
+
+    .poin > svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .foto_user{
+        width: 98px;
+        height: 98px;
+        margin-block-start: 18px;
+    }
+
+    .logo_kelas > svg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .badge_user{
+        font-size: 24px; /*Parent Besar Font Badge*/
+    }
+
+    .badge > div{
+        width: 186px;
+        height: 210.26px;
+    }
+}
+

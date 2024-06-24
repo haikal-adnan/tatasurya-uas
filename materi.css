@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Font/Mulish-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lemon";
+    src: url(Font/Lemon-Regular.ttf);
+}
+
+@font-face {
+    font-family: "League Spartan";
+    src: url(Font/LeagueSpartan-Regular.ttf);
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: 100%;
+
+}
+
+.app{
+    width: 250px;
+    height: 100%;
+    background-color: #070F2B;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+
+
+.app > *{
+    margin-top: 15px;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+}
+
+.menu_utama, .menu_akun,.menu_materi{
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+    
+}
+
+.menu_utama > p{
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 12px;
+}
+
+.menu_akun > p{
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 12px;
+}
+
+.menu_materi > p{
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 12px;
+}
+
+.menu_app{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu_app > *{
+    margin-left: 12px;
+}
+
+.active{
+    background-color: #393646;
+    color: white;
+}
+
+.active > p a{
+    color: white;
+}
+
+.active svg path {
+    fill: white;
+}
+
+.menu_app:not(.active):hover a{
+    color: #3572EF;
+    transition: 0.5s;
+
+    
+}
+
+.menu_app:not(.active) > p a{
+    color: #ffffff;
+}
+
+
+.menu_app > p{
+    margin: 0px;
+    margin-left: 4px;
+    margin-inline-start: 0px;
+    height: 21px;
+}
+
+.menu_app > p a{
+    text-decoration: none;
+   
+}
+
+
+.menu_app:not(.active):hover svg path{
+    fill: #3572EF;
+    transition: 0.5s;
+    
+}
+
+
+.menu_app > svg{
+    margin-right: 10px;
+    margin-block-start: 4px;
+}
+
+.app2{
+    display: none;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100%; 
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    z-index: 2;
+}
+
+.app2 > div{
+    margin: 10px;
+}
+
+.menu_tersembunyi{
+    cursor: pointer;
+}
+
+.menu_tersembunyi:hover svg path{
+    cursor: pointer;
+    fill: #D04848;
+    
+}
+
+.penutup_menu{
+    display: none;
+    background-color: #393646;
+    opacity: 0.5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/*Content*/
+
+.materi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8vw;
+
+    color: #000;
+    font-family: Mulish;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.materi > div{
+    margin: 1vh;
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 399px) {
+    .app2{
+        display: flex;
+    }
+
+    .content{
+        display: flex;
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .app{
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+    }
+
+    .materi{
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+
+    .kumpulan_materi{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 30px;
+    }
+
+    .kumpulan_materi > div img{
+        width: 200px;
+    }
+
+    .progress{
+        font-size: 16px;
+        width: 197px;
+        height: 40px;
+    }
+
+    .progress p{
+        margin-block-start: 10px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 400px) and (max-width: 992px) {
+    .content{
+        display: flex;
+    }
+
+    .logo_kanan{
+        margin-right: 2%; /* lebar spesifik untuk logo */
+    }
+
+    .app{
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+    }
+
+    .app2{
+        display: flex;
+    }
+
+    .materi{
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+
+    .kumpulan_materi{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 30px;
+    }
+
+    .kumpulan_materi > div img{
+        width: 300px;
+    }
+
+    .progress{
+        width: 295px;
+        height: 40px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .content{
+        display: flex;
+    }
+
+    .foto_user{
+        width: 98px;
+        height: 98px;
+        margin-block-start: 18px;
+    }
+
+    .app{
+        width: 0px;
+        display: none; /*Menu tersembunyi = display fixed*/
+        z-index: 3;
+        transition: width 0.1s;
+    }
+
+    .app2{
+        display: flex;
+    }
+    
+
+    .materi{
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    
+}
+
